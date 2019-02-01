@@ -13,19 +13,19 @@ test('input object has attacks with and without description', () => {
         id: 8,
         name: 'Двойной выстрел',
         icon: 'http://...',
-        description: 'Двойной выстрел наносит двойной урон'
-      }, 
+        description: 'Двойной выстрел наносит двойной урон',
+      },
       {
         id: 7,
         name: 'Двойной вы',
         icon: 'http://...',
-      }, 
+      },
       {
         id: 4,
         name: 'dsadf вы',
         icon: 'http://...',
-      }, 
-    ]	
+      },
+    ],
   };
 
   const expected = [
@@ -33,22 +33,22 @@ test('input object has attacks with and without description', () => {
       id: 8,
       name: 'Двойной выстрел',
       icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон'
-    }, 
+      description: 'Двойной выстрел наносит двойной урон',
+    },
     {
       id: 7,
       description: 'Описание недоступно',
       name: 'Двойной вы',
       icon: 'http://...',
-    }, 
+    },
     {
       id: 4,
       description: 'Описание недоступно',
       name: 'dsadf вы',
       icon: 'http://...',
-    }, 
+    },
   ];
-  
+
   const output = makeAttackArray(input);
 
   expect(output).toEqual(expected);
